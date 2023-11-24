@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Trader login success
+Documentation       Player Farming All Village
 
 Library             Browser
 Resource            ../config/env.robot
