@@ -24,6 +24,8 @@ ${REALMS}               Lindoso
 &{B_14}                 x=520    y=444
 &{B_15}                 x=515    y=443
 &{B_16}                 x=516    y=443
+&{B_17}                 x=523    y=440
+&{B_18}                 x=520    y=445
 
 @{FAHLFING}
 ...                     ${B_1}
@@ -42,6 +44,14 @@ ${REALMS}               Lindoso
 ...                     ${B_14}
 ...                     ${B_15}
 ...                     ${B_16}
+...                     ${B_17}
+...                     ${B_18}
+
+&{TALBAHEIM_1}          x=515    y=435
+&{TALBAHEIM_2}          x=520    y=434
+@{TALBAHEIM}
+...                     ${TALBAHEIM_1}
+...                     ${TALBAHEIM_2}
 
 &{DAUZOL_1}             x=519    y=451
 &{DAUZOL_2}             x=520    y=451
@@ -53,6 +63,12 @@ ${REALMS}               Lindoso
 &{DAUZOL_8}             x=514    y=453
 &{DAUZOL_9}             x=514    y=454
 &{DAUZOL_10}            x=513    y=455
+&{DAUZOL_11}            x=524    y=456
+&{DAUZOL_12}            x=517    y=456
+&{DAUZOL_13}            x=520    y=455
+&{DAUZOL_14}            x=521    y=455
+&{DAUZOL_15}            x=515    y=457
+&{DAUZOL_16}            x=517    y=458
 @{DAUZOL}
 ...                     ${DAUZOL_1}
 ...                     ${DAUZOL_2}
@@ -64,6 +80,12 @@ ${REALMS}               Lindoso
 ...                     ${DAUZOL_8}
 ...                     ${DAUZOL_9}
 ...                     ${DAUZOL_10}
+...                     ${DAUZOL_11}
+...                     ${DAUZOL_12}
+...                     &{DAUZOL_13}
+...                     &{DAUZOL_14}
+...                     &{DAUZOL_15}
+...                     &{DAUZOL_16}
 
 &{FOLFINGMARK_1}        x=525    y=437
 &{FOLFINGMARK_2}        x=526    y=438
@@ -74,12 +96,20 @@ ${REALMS}               Lindoso
 &{BALSUR_3}             x=532    y=441
 &{BALSUR_4}             x=532    y=442
 &{BALSUR_5}             x=531    y=447
+&{BALSUR_6}             x=529    y=443
+&{BALSUR_7}             x=534    y=440
+&{BALSUR_8}             x=534    y=444
+&{BALSUR_9}             x=535    y=444
 @{BALSUR}
 ...                     &{BALSUR_1}
 ...                     &{BALSUR_2}
 ...                     &{BALSUR_3}
 ...                     &{BALSUR_4}
 ...                     &{BALSUR_5}
+...                     &{BALSUR_6}
+...                     &{BALSUR_7}
+...                     &{BALSUR_8}
+...                     &{BALSUR_9}
 
 &{FALTALFAHL_1}         x=526    y=449
 &{FALTALFAHL_2}         x=528    y=453
@@ -100,10 +130,12 @@ ${REALMS}               Lindoso
 &{FINGTALTAL_1}         x=511    y=443
 &{FINGTALTAL_2}         x=510    y=443
 &{FINGTALTAL_3}         x=509    y=443
+&{FINGTALTAL_4}         x=510    y=446
 @{FINGTALTAL}
 ...                     ${FINGTALTAL_1}
 ...                     ${FINGTALTAL_2}
 ...                     ${FINGTALTAL_3}
+...                     ${FINGTALTAL_4}
 
 ${SPEARMAN}             120
 ${SWORDSMAN}            200

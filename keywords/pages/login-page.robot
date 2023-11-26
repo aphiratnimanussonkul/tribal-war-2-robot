@@ -12,7 +12,7 @@ ${Login Button}         \xpath=//button[@class="button-login"]
 *** Keywords ***
 Display login page
     Set Browser Timeout    30s
-    New Browser    chromium    headless=false
+    New Browser    chromium    headless=true
     New Page    ${URL WEB TRADE}
     Wait For Elements State    ${Email Input}    visible
     Wait For Elements State    ${Password Input}    visible

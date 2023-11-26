@@ -14,6 +14,9 @@ The Village ALL Send Farm
     FOR    ${berb}    IN    @{FAHLFING}
         Then Farm berbarian ${berb}[x] ${berb}[y]
     END
+    FOR    ${berb}    IN    @{TALBAHEIM}
+        Then Farm berbarian ${berb}[x] ${berb}[y]
+    END
     FOR    ${berb}    IN    @{FOLFINGMARK}
         Then Farm berbarian ${berb}[x] ${berb}[y]
     END
