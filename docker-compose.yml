@@ -2,12 +2,7 @@ version: "3.0"
 services:
   robot:
     container_name: tribal-war-2-robot-farm
-    image: marketsquare/robotframework-browser:latest
+    build: .
     user: pwuser
     volumes:
-      - ./tests/:/tests
-      - ./config/:/config
-      - ./keywords/:/keywords
       - ./reports:/reports
-      - ./farm-script.sh:/farm-script.sh
-    command: /farm-script.sh
