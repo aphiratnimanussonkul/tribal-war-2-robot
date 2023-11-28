@@ -1,8 +1,6 @@
 *** Variables ***
-${URL WEB TRADE}        https://en.tribalwars2.com
 ${USERNAME}             <YOUR_USER_NAME>
 ${PASSWORD}             <YOUR_PASSWORD>
-${REALMS}               Lindoso
 
 &{ALL}                  x=521    y=440
 &{PTT}                  x=521    y=440

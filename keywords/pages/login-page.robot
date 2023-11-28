@@ -13,7 +13,7 @@ ${Login Button}         \xpath=//button[@class="button-login"]
 Display login page
     Set Browser Timeout    30s
     New Browser    chromium    headless=true
-    New Page    ${URL WEB TRADE}
+    New Page    https://en.tribalwars2.com
     Wait For Elements State    ${Email Input}    visible
     Wait For Elements State    ${Password Input}    visible
 

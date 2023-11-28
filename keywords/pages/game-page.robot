@@ -14,6 +14,10 @@ ${SEND_ARMY_BUTTON}                     xpath=//div[@tooltip-content="Send Army"
 ${ATTACK_BUTTON}                        xpath=//a[@ng-click="sendArmy('attack')"]
 ${ARMY_AMOUNT_INPUT}                    xpath=//input[@ng-model="sliders[name].value"]
 ${ARMY_AMOUNT_TEXT}                     xpath=//div[@class="range-inline-text"]
+${NOTIFICATION_CARD}                    xpath=//div[@ng-if="title && notificationId && type === NEWS"]
+${NOTIFICATION_CLOSE_BUTTON}            xpath=//div[@ng-show="type === NEWS"]
+${DAILAY_LOGIN_BONUS_MODAL}             xpath=//div[@ng-controller="ModalDailyLoginBonusController"]
+${CLAIM_REWARD_BUTTON}                  xpath=//a[@ng-click="claimReward()"]
 
 
 *** Keywords ***
@@ -90,3 +94,21 @@ Check Skip Send Amry ${current_army_name}
     Pass Execution If    "${current_army_name}" == "Trebuchet"    "Not For Farm"
     Pass Execution If    "${current_army_name}" == "Nobleman"    "Not For Farm"
     Pass Execution If    "${current_army_name}" == "Paladin"    "Not For Farm"
+
+Close News
+    ${have_notification}    ${value}=    Run Keyword And Ignore Error
+    ...    Wait For Elements State
+    ...    ${NOTIFICATION_CARD}
+    ...    visible
+    ...    2s
+    IF    '${have_notification}' == 'PASS'
+        Click    ${NOTIFICATION_CLOSE_BUTTON}
+    END
+
+Claim Daily Login Reward
+    ${have_daily_reward}    ${value}=    Run Keyword And Ignore Error
+    ...    Wait For Elements State
+    ...    ${DAILAY_LOGIN_BONUS_MODAL}
+    ...    visible
+    ...    2s
+    IF    '${have_daily_reward}' == 'PASS'    Click    ${CLAIM_REWARD_BUTTON}
