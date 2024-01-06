@@ -13,6 +13,7 @@ Login And Select Realms ${username} ${password} ${realms}
     Player Select Realms ${realms}
     Close News
     Claim Daily Login Reward
+    Claim Special Offer
 
 Player landing to login page
     Display Login Page

@@ -18,6 +18,8 @@ ${NOTIFICATION_CARD}                    xpath=//div[@ng-if="title && notificatio
 ${NOTIFICATION_CLOSE_BUTTON}            xpath=//div[@ng-show="type === NEWS"]
 ${DAILAY_LOGIN_BONUS_MODAL}             xpath=//div[@ng-controller="ModalDailyLoginBonusController"]
 ${CLAIM_REWARD_BUTTON}                  xpath=//a[@ng-click="claimReward()"]
+${SPECIAL_OFFER_MODAL}                  xpath=//div[@ng-if="type === SPECIALOFFER"]
+${CLAIM_SPECIAL_BUTTON}                 xpath=//a[@ng-click="buyOffer(offer, notificationId); $event.stopPropagation();"]
 
 
 *** Keywords ***
@@ -112,3 +114,11 @@ Claim Daily Login Reward
     ...    visible
     ...    2s
     IF    '${have_daily_reward}' == 'PASS'    Click    ${CLAIM_REWARD_BUTTON}
+
+Claim Special Offer
+    ${have_spcial_offer}    ${value}=    Run Keyword And Ignore Error
+    ...    Wait For Elements State
+    ...    ${SPECIAL_OFFER_MODAL}
+    ...    visible
+    ...    2s
+    IF    '${have_spcial_offer}' == 'PASS'    Click    ${CLAIM_SPECIAL_BUTTON}
